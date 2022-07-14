@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -21,12 +22,6 @@ public class AudioManager : MonoBehaviour
         {
             PlayNextSong();
         }
-
-        if(endZone.isInEndZone)
-        {
-            audioSource.clip = victory;
-            //audioSource.Play();
-        }
     }
 
     void PlayNextSong()
@@ -35,4 +30,5 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = playlist[musicIndex];
         audioSource.Play();
     }
+
 }
