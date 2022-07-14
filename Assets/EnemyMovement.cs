@@ -11,11 +11,11 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] waypoints;
 
     private Transform target;
-    private int destPoint = 0;
+    private int destPoint = 1;
 
     void Start()
     {
-        target = waypoints[0];
+        target = waypoints[1];
     }
 
     void Update()
@@ -25,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
 
         if(Vector3.Distance(transform.position, target.position) < 0.3f)
         {
+            transform.Rotate(0.0f, 180f, 0.0f,Space.World);
             destPoint = (destPoint + 1) % waypoints.Length;
             target = waypoints[destPoint];
         }
