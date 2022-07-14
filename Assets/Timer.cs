@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     void Awake()
     {
-        time = (int)Time.time;
+        time = (int)Time.timeSinceLevelLoad;;
     }
 
     void Update()
@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
 
         if(!endZone.isInEndZone)
         {
-            time = (int)Time.time;
+            time = (int)Time.timeSinceLevelLoad;
         }
         
     }

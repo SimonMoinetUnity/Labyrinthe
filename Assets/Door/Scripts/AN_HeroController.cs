@@ -21,8 +21,8 @@ public class AN_HeroController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Cam = Camera.main.GetComponent<Transform>();
 
-        Cursor.lockState = CursorLockMode.Locked; // freeze cursor on screen centre
-        Cursor.visible = false; // invisible cursor
+        //Cursor.lockState = CursorLockMode.Locked; // freeze cursor on screen centre
+        //Cursor.visible = false; // invisible cursor
     }
 
     void Update()
