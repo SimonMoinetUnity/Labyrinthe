@@ -37,6 +37,8 @@ public class AN_DoorScript : MonoBehaviour
     JointLimits hingeLim;
     float currentLim;
 
+    public GameObject keyImage;
+
     void Start()
     {
         rbDoor = GetComponent<Rigidbody>();
@@ -60,6 +62,7 @@ public class AN_DoorScript : MonoBehaviour
             {
                 RedLocked = false;
                 HeroInteractive.RedKey = false;
+                keyImage.SetActive(false);
             }
             else if (HeroInteractive != null && BlueLocked && HeroInteractive.BlueKey)
             {

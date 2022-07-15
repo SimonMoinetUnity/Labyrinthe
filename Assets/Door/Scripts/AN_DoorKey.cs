@@ -8,6 +8,8 @@ public class AN_DoorKey : MonoBehaviour
     public bool isRedKey = true;
     AN_HeroInteractive hero;
 
+    public GameObject keyImage;
+
     // NearView()
     float distance;
     float angleView;
@@ -25,6 +27,7 @@ public class AN_DoorKey : MonoBehaviour
             if (isRedKey) hero.RedKey = true;
             else hero.BlueKey = true;
             Destroy(gameObject);
+            keyImage.SetActive(true);
         }
     }
 
